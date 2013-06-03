@@ -6,7 +6,12 @@ This is an example that gives Android apps developed with Appcelerator Titanium 
 The goal of this project is to allow to write code like `win.rightNavButton = button` on Android and have it work.
 
 The current version supports a custom 'TabGroup' with a navBar above it and ads the following functions to Android windows.
-'barColor', 'title', 'titleControl', 'barImage', 'rightNavButton', 'leftNavButton'
+```barColor
+title
+titleControl
+barImage
+rightNavButton
+leftNavButton```
 
 To create a window using this framework, just swap out `Ti.UI.createWindow` with `require('xui').createWindow`
 
