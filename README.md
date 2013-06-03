@@ -1,4 +1,4 @@
-# Ti.xui
+# TiXUI
 This is an example that gives Android apps developed with Appcelerator Titanium much more parity with iOS' 'navBar'. I created this to reduce the amount of braching code I needed to write to get a functional Android App up and running.
 
 ![demo](https://dl.dropboxusercontent.com/u/843217/xui_screen.jpg)
