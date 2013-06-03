@@ -11,7 +11,8 @@ title
 titleControl
 barImage
 rightNavButton
-leftNavButton```
+leftNavButton
+```
 
 To create a window using this framework, just swap out `Ti.UI.createWindow` with `require('xui').createWindow`
 
