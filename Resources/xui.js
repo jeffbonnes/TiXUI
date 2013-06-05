@@ -70,7 +70,7 @@ var defaultButtonStyles = {
 	title : "",
 	image : "",
 	backgroundImage : "",
-	width : 60,
+	width : Ti.UI.FILL,
 	height : Ti.UI.FILL,
 	borderWidth : 0,
 	backgroundColor : 'transparent',
@@ -123,8 +123,13 @@ var XNavBar = function(params) {
 		opacity : 0.35
 	});
 
+	var rightNavContainer = Ti.UI.createView({
+		right : 0,
+		width : 60
+	});
+
 	var rightNavButton = Ti.UI.createButton(defaultButtonStyles);
-	rightNavButton.right = 0;
+	rightNavContainer.add(rightNavButton);
 
 	rightNavButton.addEventListener('click', function() {
 		if (self.rightNavButton) {
@@ -132,8 +137,12 @@ var XNavBar = function(params) {
 		}
 	});
 
+	var leftNavContainer = Ti.UI.createView({
+		left : 0,
+		width : 60
+	});
 	var leftNavButton = Ti.UI.createButton(defaultButtonStyles);
-	leftNavButton.left = 0;
+	leftNavContainer.add(leftNavButton);
 
 	leftNavButton.addEventListener('click', function() {
 		if (self.leftNavButton) {
@@ -147,8 +156,8 @@ var XNavBar = function(params) {
 	self._view = navBar;
 	navBar.add(titleShadow);
 	navBar.add(title);
-	navBar.add(rightNavButton);
-	navBar.add(leftNavButton)
+	navBar.add(rightNavContainer);
+	navBar.add(leftNavContainer)
 
 	self.watch('visible', function(id, oldval, newval) {
 		navBar.visible = newval;
